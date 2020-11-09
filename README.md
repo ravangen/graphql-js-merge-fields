@@ -1,8 +1,11 @@
 # Merge Fields Validation
 
-Demonstration to cause the [valiation rule `OverlappingFieldsCanBeMergedRule`](https://github.com/graphql/graphql-js/blob/v15.4.0/src/validation/rules/OverlappingFieldsCanBeMergedRule.js) to consume substantial processing time when determining if overlapping fields can be merged.
+Demonstration to cause the [valiation rule `OverlappingFieldsCanBeMergedRule`](https://github.com/graphql/graphql-js/blob/v15.4.0/src/validation/rules/OverlappingFieldsCanBeMergedRule.js) to consume substantial processing time.
 
-Send [`malicious.graphql`](malicious.graphql) query to server. This example requests the same field 5000 times but could be even larger.
+Send [`malicious.graphql`](malicious.graphql) query. This requests the same field 5000 times but could be even larger.
+
+The Chrome CPU profile [`example.cpuprofile`](example.cpuprofile) shows:
+![image](example.png)
 
 ## Setup
 
